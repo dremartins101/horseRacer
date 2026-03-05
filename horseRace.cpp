@@ -14,14 +14,31 @@ int main(){
 	srand(time(NULL));
 
 	int horses[NUM_HORSES] = {0, 0, 0, 0, 0};
+	bool winner = false;
+	
+	// advance horses
+	while (!winner){
+		for (int i = 0; i < NUM_HORSES; i++){
+			advance(i, horses);
+		}
+	// print lanes
+	for (int i = 0; i < NUM_HORSES; i++){
+		printLane(i, horses);
+	}
 
-	// test
-	for (int i = 0; i < 10; i++){
-		advance(0, horses);
-		printLane(0, horses);
-	} // end for
+	// check winner
+	for (int i = 0; i < NUM_HORSES; i++){
+		if (isWinner(i, horses)){
+			std::cout << "Horse " << i << " WINS!" << std::endl;
+			winner = true;
+		}
+	}
 
 
+	if (!winner)
+		std::cout << "Press enter for another turn";
+		std::cin.get();
+	}
 	return 0;
 } // end main
 
@@ -41,4 +58,13 @@ void advance(int horseNum, int* horses){
 	int coin = rand() % 2;
 	horses[horseNum] += coin;
 } // end advance
+
+bool isWinner(int horseNum, int* horses){
+	if (horses[horseNum] >= TRACK_LENGTH - 1){
+		return true;
+	}
+	return false;
+} // end 
+
+
 

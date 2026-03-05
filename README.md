@@ -25,10 +25,23 @@ while keepGoing:
   for each horse:
     advance that horse
     print lane for horse
+
+ check winners
+  winCount = 0
+  for each horse:
     if horse wins:
-      set keepGoing to false (get out of game)
-    prmpt for next turn
-```
+      add to winCount
+
+  if winCount == 1:
+    print horse number is the winner
+    set keepGoing to false
+  else if winCount > 1:
+    print "It's a tie!"
+    set keepGoing to false
+
+  prompt for next turn (only if keepGoing is still true)
+
+ ```
 
 ## advance()
 ```

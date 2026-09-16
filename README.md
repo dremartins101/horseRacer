@@ -46,6 +46,11 @@ void printLane(int horseNum, int* horses){
 
 bool isWinner(int horseNum, int* horses){
     given horseNum and horse array
-    if horseNum 
+    winner = false
+    if horseNum == TRACK_LENGTH - 1:
+        set winner to true
+        print (number of horse) is the winner!
+    
+         
 
 

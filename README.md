@@ -7,16 +7,16 @@
 
 
 ## Algorithm
-
+```
 set up randomization (c style)
 set up horses array
 
 set keepGoing to true
 while loop for main game
 for loop goes through horses
-for each horse:
-    print lanes for horse
-    advance horse
+    for each horse:
+        print lanes for horse
+        advance horse
 
 check winners
 winCount = 0
@@ -26,7 +26,7 @@ if winCount == 1:
     print horse # that won
     set keepGoing to false
     
-
+```
 void advance(int horseNum, int* horses){
     given horseNum (position) and horse array
     rand number 0-1
@@ -52,5 +52,3 @@ bool isWinner(int horseNum, int* horses){
         print (number of horse) is the winner!
     
          
-
-

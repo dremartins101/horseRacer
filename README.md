@@ -27,13 +27,17 @@ if winCount == 1:
     set keepGoing to false
     
 ```
+
+```
 void advance(int horseNum, int* horses){
     given horseNum (position) and horse array
     rand number 0-1
     if 1, move horse up
 }
 
+```
 
+```
 void printLane(int horseNum, int* horses){
     given horseNum and horse array
     for loop goes from 0 to TRACK_LENGTH 
@@ -42,13 +46,14 @@ void printLane(int horseNum, int* horses){
         else:
             print "."
 }
+```
 
-
+```
 bool isWinner(int horseNum, int* horses){
     given horseNum and horse array
     winner = false
     if horseNum == TRACK_LENGTH - 1:
         set winner to true
         print (number of horse) is the winner!
-    
+```  
          

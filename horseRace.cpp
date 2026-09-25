@@ -38,16 +38,17 @@ void advance(int horseNum, int* horses){
 void printLane(int horseNum, int* horses){
 	for(int i = 0; i < TRACK_LENGTH; i++){
 	if (i == horses[horseNum]){
-		std::cout << horseNum
+		std::cout << horseNum;
 	} else {
-		std::cout << "."
+		std::cout << ".";
 	}
 
 	std::cout << "\n" << std::endl
+	}
 } // end printLane
 bool isWinner(int horseNum, int* horses){
 	if(horses[horseNum] == TRACK_LENGTH){
-		std::cout << horseNum << std::endl
+		std::cout << horseNum << std::endl;
 		return true;
 	} // end if
 	else {
